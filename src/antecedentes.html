@@ -3,292 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manuel Esteban Guzmán Gómez — Antecedentes Penales</title>
+  <title>Certificación de Antecedentes Penales — Manuel Esteban Guzmán Gómez</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.css" />
-  <style>
-    svg { display: block; max-width: 100%; max-height: 100%; overflow: hidden; }
-
-    /* ── Estilos exclusivos de esta página ── */
-
-    .doc-section {
-      padding: 36px 56px 48px;
-    }
-
-    .doc-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 40px;
-      align-items: start;
-    }
-
-    /* Info del documento */
-    .doc-info__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(184,154,94,.1);
-      border: 1px solid rgba(184,154,94,.3);
-      border-radius: 2px;
-      padding: 5px 12px;
-      margin-bottom: 20px;
-    }
-    .doc-info__badge-dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: #4caf82;
-      box-shadow: 0 0 6px rgba(76,175,130,.6);
-      animation: pulse-dot 2s infinite;
-    }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: .4; }
-    }
-    .doc-info__badge-text {
-      font-size: 0.62rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #4caf82;
-    }
-
-    .doc-info__title {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.25;
-      margin-bottom: 8px;
-    }
-
-    .doc-info__subtitle {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 24px;
-    }
-
-    .doc-info__text {
-      font-size: 0.8rem;
-      line-height: 1.85;
-      color: var(--ink-soft);
-      font-weight: 300;
-      margin-bottom: 28px;
-      max-width: 460px;
-    }
-
-    /* Metadata table */
-    .meta-table {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      border: 1px solid var(--rule);
-      border-radius: 3px;
-      overflow: hidden;
-      margin-bottom: 28px;
-    }
-
-    .meta-row {
-      display: grid;
-      grid-template-columns: 130px 1fr;
-      border-bottom: 1px solid var(--rule);
-    }
-    .meta-row:last-child { border-bottom: none; }
-
-    .meta-row__key {
-      background: var(--bg);
-      padding: 9px 14px;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ink-mid);
-      border-right: 1px solid var(--rule);
-    }
-
-    .meta-row__val {
-      padding: 9px 14px;
-      font-size: 0.73rem;
-      color: var(--ink);
-      font-weight: 400;
-      background: #fff;
-    }
-
-    .meta-row__val.status-ok {
-      color: #4caf82;
-      font-weight: 600;
-    }
-
-    /* CTA buttons */
-    .doc-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 9px 18px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      cursor: pointer;
-      transition: all .2s;
-      text-decoration: none;
-    }
-
-    .btn--primary {
-      background: var(--gold);
-      color: #fff;
-      border: 1px solid var(--gold);
-    }
-    .btn--primary:hover {
-      background: var(--gold-light);
-      border-color: var(--gold-light);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(184,154,94,.3);
-    }
-
-    .btn--outline {
-      background: transparent;
-      color: var(--ink-mid);
-      border: 1px solid var(--rule);
-    }
-    .btn--outline:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-      transform: translateY(-1px);
-    }
-
-    .btn svg {
-      width: 13px; height: 13px;
-      stroke: currentColor;
-    }
-
-    /* Document preview card */
-    .doc-preview {
-      position: sticky;
-      top: 24px;
-    }
-
-    .doc-preview__card {
-      background: #fff;
-      border: 1px solid var(--rule);
-      border-radius: 4px;
-      box-shadow: 0 8px 32px rgba(15,15,15,.1), 0 2px 8px rgba(15,15,15,.06);
-      overflow: hidden;
-      transition: transform .3s ease, box-shadow .3s ease;
-    }
-    .doc-preview__card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 48px rgba(15,15,15,.14), 0 4px 12px rgba(15,15,15,.08);
-    }
-
-    .doc-preview__header {
-      background: var(--left-bg);
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .doc-preview__label {
-      font-size: 0.58rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .doc-preview__dots {
-      display: flex;
-      gap: 5px;
-    }
-    .doc-preview__dots span {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.15);
-    }
-    .doc-preview__dots span:first-child { background: #f87171; }
-    .doc-preview__dots span:nth-child(2) { background: #fbbf24; }
-    .doc-preview__dots span:last-child  { background: #34d399; }
-
-    .doc-preview__img-wrap {
-      position: relative;
-      overflow: hidden;
-      background: #f5f5f5;
-    }
-
-    .doc-preview__img {
-      width: 100%;
-      display: block;
-      transition: transform .4s ease;
-    }
-    .doc-preview__card:hover .doc-preview__img {
-      transform: scale(1.02);
-    }
-
-    .doc-preview__overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent 60%, rgba(15,15,15,.5));
-      pointer-events: none;
-    }
-
-    .doc-preview__footer {
-      background: var(--left-bg);
-      padding: 10px 14px;
-      text-align: center;
-    }
-    .doc-preview__footer p {
-      font-size: 0.6rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--left-muted);
-    }
-
-    /* Back link */
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      text-decoration: none;
-      margin-bottom: 20px;
-      transition: gap .2s;
-    }
-    .back-link:hover { gap: 10px; }
-    .back-link svg {
-      width: 12px; height: 12px;
-      stroke: currentColor;
-    }
-
-    @media (max-width: 700px) {
-      .doc-section { padding: 24px; }
-      .doc-wrapper  { grid-template-columns: 1fr; }
-      .doc-preview  { position: static; }
-    }
-  </style>
+  <link rel="stylesheet" href="cert.css" />
 </head>
 <body>
+<div class="page">
 
-<div class="page" id="cv-page">
-
-  <!-- ══ HEADER (mismo que CV) ══ -->
-  <header class="header" data-animate="fade-down">
+  <header class="header">
     <div class="header__name-block">
       <div class="header__line header__line--left"></div>
       <div class="header__center">
@@ -298,58 +23,38 @@
       </div>
       <div class="header__line header__line--right"></div>
     </div>
-
     <div class="contact-row">
       <a class="contact-item" href="tel:50685158699">
-        <span class="contact-item__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.67 19.79 19.79 0 01.21 4.06 2 2 0 012.22 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.18 6.18l1.07-1.07a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        </span>
+        <span class="contact-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.67 19.79 19.79 0 01.21 4.06 2 2 0 012.22 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.18 6.18l1.07-1.07a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span>
         <span>(506) 8515-8699</span>
       </a>
       <div class="contact-sep"></div>
       <a class="contact-item" href="mailto:manu05gg09@gmail.com">
-        <span class="contact-item__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </span>
+        <span class="contact-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
         <span>manu05gg09@gmail.com</span>
       </a>
       <div class="contact-sep"></div>
       <div class="contact-item">
-        <span class="contact-item__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </span>
+        <span class="contact-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
         <span>Avenida 33A, Liberia, Guanacaste, Costa Rica</span>
       </div>
     </div>
   </header>
 
-  <!-- ══ DOCUMENTO ══ -->
-  <div class="doc-section" data-animate="fade-up" data-delay="100">
-
-    <!-- Back link -->
+  <div class="cert-section">
     <a href="index.html" class="back-link">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
       Volver al Curriculum
     </a>
-
-    <div class="doc-wrapper">
-
-      <!-- LEFT: información del documento -->
-      <div class="doc-info">
-
-        <div class="doc-info__badge">
-          <div class="doc-info__badge-dot"></div>
-          <span class="doc-info__badge-text">Documento Verificado</span>
+    <div class="cert-wrapper">
+      <div class="cert-info">
+        <div class="cert-badge">
+          <div class="cert-badge__dot"></div>
+          <span class="cert-badge__text">Documento Verificado</span>
         </div>
-
-        <h2 class="doc-info__title">Certificación de<br>Antecedentes Penales</h2>
-        <p class="doc-info__subtitle">Uso Laboral · Poder Judicial · Costa Rica</p>
-
-        <p class="doc-info__text">
-          Certificación oficial emitida por la Dirección Ejecutiva del Registro Judicial de la República de Costa Rica, confirmando el estado de antecedentes penales del portador para fines laborales, de conformidad con la Ley del Registro y Archivos Judiciales N.° 6723.
-        </p>
-
-        <!-- Metadata -->
+        <h2 class="cert-title">Certificación de Antecedentes Penales</h2>
+        <p class="cert-subtitle">Poder Judicial · Uso Laboral · Costa Rica</p>
+        <p class="cert-desc">Certificación oficial emitida por la Dirección Ejecutiva del Registro Judicial, confirmando el estado de antecedentes penales para fines laborales, de conformidad con la Ley N.° 6723.</p>
         <div class="meta-table">
           <div class="meta-row">
             <span class="meta-row__key">Nombre</span>
@@ -381,107 +86,36 @@
           </div>
           <div class="meta-row">
             <span class="meta-row__key">Resultado</span>
-            <span class="meta-row__val status-ok">✓ No registra antecedentes penales</span>
+            <span class="meta-row__val class="status-ok"">✓ No registra antecedentes penales</span>
           </div>
         </div>
-
-        <!-- Actions -->
-        <div class="doc-actions">
-          <a href="antecedentes.jpg" download class="btn btn--primary" id="btn-download">
+        <div class="cert-actions">
+          <a href="antecedentes.jpg" download class="btn btn--primary">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Descargar documento
+            Descargar
           </a>
-          <button class="btn btn--outline" id="btn-zoom">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            Ver en pantalla completa
-          </button>
-        </div>
-
-      </div>
-
-      <!-- RIGHT: preview del documento -->
-      <div class="doc-preview" data-animate="fade-up" data-delay="200">
-        <div class="doc-preview__card" id="doc-card">
-          <div class="doc-preview__header">
-            <span class="doc-preview__label">Reg. Judicial · CR</span>
-            <div class="doc-preview__dots">
-              <span></span><span></span><span></span>
-            </div>
-          </div>
-          <div class="doc-preview__img-wrap">
-            <!-- Coloca aquí tu imagen: antecedentes.jpg (en la misma carpeta src/) -->
-            <img
-              src="antecedentes.jpg"
-              alt="Certificación de Antecedentes Penales — Manuel Esteban Guzmán Gómez"
-              class="doc-preview__img"
-              id="doc-img"
-              onerror="this.closest('.doc-preview__img-wrap').innerHTML = '<div style=\'padding:40px 20px;text-align:center;color:#999;font-size:.75rem;\'>Coloca el archivo<br><strong>antecedentes.jpg</strong><br>en la carpeta src/</div>'"
-            />
-            <div class="doc-preview__overlay"></div>
-          </div>
-          <div class="doc-preview__footer">
-            <p>Poder Judicial · República de Costa Rica</p>
-          </div>
         </div>
       </div>
-
+      <div class="cert-preview">
+        <div class="cert-preview__card">
+          <div class="cert-preview__header">
+            <span class="cert-preview__label">Poder Judicial · CR</span>
+            <div class="cert-preview__dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="cert-preview__img-wrap">
+            <img src="antecedentes.jpg" alt="Certificación de Antecedentes Penales" class="cert-preview__img"
+              onerror="this.closest('.cert-preview__img-wrap').innerHTML='<div class=\'cert-placeholder\'>Coloca <strong>antecedentes.jpg</strong> en src/</div>'" />
+          </div>
+          <div class="cert-preview__footer"><p>Poder Judicial · CR</p></div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- ══ FOOTER ══ -->
   <footer class="cv-footer">
     <div class="cv-footer__line"></div>
     <p class="cv-footer__text">Manuel Esteban Guzmán Gómez &nbsp;·&nbsp; Informática Empresarial &nbsp;·&nbsp; Costa Rica</p>
   </footer>
-
-</div><!-- /page -->
-
-<!-- Lightbox overlay -->
-<div id="lightbox" style="
-  display:none;
-  position:fixed;inset:0;
-  background:rgba(0,0,0,.92);
-  z-index:1000;
-  align-items:center;
-  justify-content:center;
-  cursor:zoom-out;
-">
-  <img id="lightbox-img" src="" alt="Documento ampliado" style="
-    max-width:90vw;
-    max-height:90vh;
-    object-fit:contain;
-    box-shadow:0 8px 64px rgba(0,0,0,.8);
-    border-radius:3px;
-  "/>
 </div>
-
-<script src="index.js"></script>
-<script>
-  // ── Lightbox ──
-  const lightbox    = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const docImg      = document.getElementById('doc-img');
-  const btnZoom     = document.getElementById('btn-zoom');
-
-  function openLightbox() {
-    if (!docImg || !docImg.src) return;
-    lightboxImg.src = docImg.src;
-    lightbox.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    lightbox.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-
-  if (btnZoom)  btnZoom.addEventListener('click', openLightbox);
-  if (docImg)   docImg.addEventListener('click', openLightbox);
-  if (lightbox) lightbox.addEventListener('click', closeLightbox);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
-  });
-</script>
 </body>
 </html>
