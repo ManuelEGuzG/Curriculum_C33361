@@ -9,12 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="cert.css" />
-  <style>svg { display:block; max-width:100%; max-height:100%; overflow:hidden; }</style>
 </head>
 <body>
 <div class="page">
 
-  <header class="header" data-animate="fade-down">
+  <header class="header">
     <div class="header__name-block">
       <div class="header__line header__line--left"></div>
       <div class="header__center">
@@ -42,23 +41,20 @@
     </div>
   </header>
 
-  <div class="cert-section" data-animate="fade-up" data-delay="100">
+  <div class="cert-section">
     <a href="index.html" class="back-link">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
       Volver al Curriculum
     </a>
-
     <div class="cert-wrapper">
       <div class="cert-info">
         <div class="cert-badge">
           <div class="cert-badge__dot"></div>
-          <span class="cert-badge__text">Certificado de Capacitación</span>
+          <span class="cert-badge__text">Documento Verificado</span>
         </div>
-
-        <h2 class="cert-title">Alfabetización en<br>Seguridad Digital</h2>
+        <h2 class="cert-title">Alfabetización en Seguridad Digital</h2>
         <p class="cert-subtitle">Instituto Nacional de Aprendizaje · Costa Rica</p>
-        <p class="cert-desc">Certificado otorgado por el Instituto Nacional de Aprendizaje, acreditando la aprobación del Curso de Capacitación en Alfabetización en Seguridad Digital, cumpliendo los requisitos curriculares de aprovechamiento.</p>
-
+        <p class="cert-desc">Certificado de capacitación en Alfabetización en Seguridad Digital con duración de 25 horas, cumpliendo los requisitos curriculares de aprovechamiento del INA.</p>
         <div class="meta-table">
           <div class="meta-row">
             <span class="meta-row__key">Institución</span>
@@ -86,38 +82,31 @@
           </div>
           <div class="meta-row">
             <span class="meta-row__key">Identificación</span>
-            <span class="meta-row__val">504610701</span>
+            <span class="meta-row__val">506610701</span>
           </div>
           <div class="meta-row">
             <span class="meta-row__key">Estado</span>
-            <span class="meta-row__val status-ok">✓ Aprobado satisfactoriamente</span>
+            <span class="meta-row__val class="status-ok"">✓ Aprobado satisfactoriamente</span>
           </div>
         </div>
-
         <div class="cert-actions">
           <a href="seguridad-digital.jpg" download class="btn btn--primary">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Descargar
           </a>
-          <button class="btn btn--outline" id="btn-zoom">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            Pantalla completa
-          </button>
         </div>
       </div>
-
-      <div class="cert-preview" data-animate="fade-up" data-delay="200">
+      <div class="cert-preview">
         <div class="cert-preview__card">
           <div class="cert-preview__header">
-            <span class="cert-preview__label">INA · Costa Rica</span>
+            <span class="cert-preview__label">INA · Costa Rica · 2025</span>
             <div class="cert-preview__dots"><span></span><span></span><span></span></div>
           </div>
           <div class="cert-preview__img-wrap">
-            <img src="seguridad-digital.jpg" alt="Alfabetización en Seguridad Digital" class="cert-preview__img" id="doc-img"
-              onerror="this.closest('.cert-preview__img-wrap').innerHTML='<div class=\'cert-placeholder\'>Coloca el archivo<br><strong>seguridad-digital.jpg</strong><br>en src/</div>'" />
-            <div class="cert-preview__overlay"></div>
+            <img src="seguridad-digital.jpg" alt="Alfabetización en Seguridad Digital" class="cert-preview__img"
+              onerror="this.closest('.cert-preview__img-wrap').innerHTML='<div class=\'cert-placeholder\'>Coloca <strong>seguridad-digital.jpg</strong> en src/</div>'" />
           </div>
-          <div class="cert-preview__footer"><p>Instituto Nacional de Aprendizaje · 2025</p></div>
+          <div class="cert-preview__footer"><p>INA · Costa Rica · 2025</p></div>
         </div>
       </div>
     </div>
@@ -128,9 +117,5 @@
     <p class="cv-footer__text">Manuel Esteban Guzmán Gómez &nbsp;·&nbsp; Informática Empresarial &nbsp;·&nbsp; Costa Rica</p>
   </footer>
 </div>
-
-<div id="lightbox" class="lightbox"><img id="lightbox-img" src="" alt="" /></div>
-<script src="index.js"></script>
-<script src="cert.js"></script>
 </body>
 </html>
